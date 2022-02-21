@@ -107,10 +107,12 @@ export default class UserLoginPage extends React.Component {
                                   value={this.state.password}
                                   onChange={event => this.formInputChanged(event as any)}></Form.Control>
                   </Form.Group>
+                  <br />
                   <Form.Group>
                     <Button variant="primary" onClick={ () => this.doLogin() }>Log in</Button>
                   </Form.Group>
                 </Form>
+                <br />
                 <Alert variant="danger"
                        className={ this.state.errorMessage ? '' : 'd-none' }>
                   { this.state.errorMessage }
