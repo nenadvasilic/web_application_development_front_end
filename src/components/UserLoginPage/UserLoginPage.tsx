@@ -30,7 +30,6 @@ export default class UserLoginPage extends React.Component {
     const newState = Object.assign(this.state, {
       [ event.target.id ]: event.target.value,
     });
-
     this.setState(newState);
   }
 

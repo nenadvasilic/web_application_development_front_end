@@ -23,7 +23,6 @@ export default function api(
     .catch(async err => {
       if (err.response.status === 401) {
         const newToken = await refreshToken();
-
         if (!newToken) {
           const response: ApiResponse = {
             status: 'login',
@@ -31,14 +30,10 @@ export default function api(
           }
           return resolve(response);
         }
-
         saveToken(newToken);
-
         requestData.headers['Authorization'] = getToken();
-
         return await repeatRequest(requestData, resolve);
       }
-
       const response: ApiResponse = {
         status: 'error',
         data: err,
