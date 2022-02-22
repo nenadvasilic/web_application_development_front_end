@@ -14,6 +14,7 @@ export class MainMenuItem {
 
 interface MainMenuProperties {
   items: MainMenuItem[];
+  showCart?: boolean;
 }
 
 interface MainMenuState {
