@@ -34,7 +34,7 @@ export default class SingleArticlePreview extends React.Component<SingleArticleP
                         <AddToCartInput article={ this.props.article } />
 
                         <Link to={ `/article/${ this.props.article.articleId }` }
-                              className="btn btn-primary btn-block btn-sm">
+                              className="btn btn-primary btn-block btn-sm mt-3 w-100">
                             Open article page
                         </Link>
                     </Card.Body>
