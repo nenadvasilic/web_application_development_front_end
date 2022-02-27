@@ -51,7 +51,7 @@ export default function api(
     });
 }
 
-/*export function apiFile(
+export function apiFile(
     path: string,
     name: string,
     file: File,
@@ -89,7 +89,7 @@ export default function api(
     
                 saveToken(role, newToken);
     
-                requestData.headers['Authorization'] = getToken(role);
+                // requestData.headers['Authorization'] = getToken(role);
     
                 return await repeatRequest(requestData, resolve);
             }
@@ -102,7 +102,7 @@ export default function api(
             resolve(response);
         });
     });
-}*/
+}
 
 export interface ApiResponse {
     status: 'ok' | 'error' | 'login';
